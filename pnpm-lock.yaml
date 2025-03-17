@@ -41,6 +41,9 @@ importers:
       esbuild:
         specifier: ^0.25.1
         version: 0.25.1
+      esbuild-plugin-env:
+        specifier: ^1.1.1
+        version: 1.1.1
       hono:
         specifier: ^4.7.4
         version: 4.7.4
@@ -1322,6 +1325,10 @@ packages:
     resolution: {integrity: sha512-QM8q3zDe58hqUqjraQOmzZ1LIH9SWQJTlEKCH4kJ2oQvLZk7RbQXvtDM2XEq3fwkV9CCvvH4LA0AV+ogFsBM2Q==}
     engines: {node: '>=8'}
 
+  dotenv@16.4.7:
+    resolution: {integrity: sha512-47qPchRCykZC03FhkYAhrvwU4xDBFIj1QPqaarj6mdM/hgUzfPHcpkHJOn3mJAufFeeAxAzeGsr5X0M4k6fLZQ==}
+    engines: {node: '>=12'}
+
   dotenv@8.6.0:
     resolution: {integrity: sha512-IrPdXQsk2BbzvCBGBOTmmSH5SodmqZNt4ERAZDmW4CT+tL8VtvinqywuANaFu4bOMWki16nqf0e4oC0QIaDr/g==}
     engines: {node: '>=10'}
@@ -1365,6 +1372,9 @@ packages:
 
   es-module-lexer@1.6.0:
     resolution: {integrity: sha512-qqnD1yMU6tk/jnaMosogGySTZP8YtUgAffA9nMN+E/rjxcfRQ6IEk7IiozUjgxKoFHBGjTLnrHB/YC45r/59EQ==}
+
+  esbuild-plugin-env@1.1.1:
+    resolution: {integrity: sha512-xM8peq9LLzvrQ/1czyj1HLhbJgtD0UzlKuNuTvPySdFGc77ysYsqo3oxDBOyQVSaa4YQU4wjrPpbeeDX1z0eHA==}
 
   esbuild@0.25.1:
     resolution: {integrity: sha512-BGO5LtrGC7vxnqucAe/rmvKdJllfGaYWdyABvyMoXQlfYMb2bbRuReWR5tEGE//4LcNJj9XrkovTqNYRFZHAMQ==}
@@ -4160,6 +4170,8 @@ snapshots:
     dependencies:
       is-obj: 2.0.0
 
+  dotenv@16.4.7: {}
+
   dotenv@8.6.0: {}
 
   eastasianwidth@0.2.0: {}
@@ -4193,6 +4205,10 @@ snapshots:
       is-arrayish: 0.2.1
 
   es-module-lexer@1.6.0: {}
+
+  esbuild-plugin-env@1.1.1:
+    dependencies:
+      dotenv: 16.4.7
 
   esbuild@0.25.1:
     optionalDependencies:

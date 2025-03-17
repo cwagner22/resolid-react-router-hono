@@ -1,4 +1,6 @@
 import esbuild from "esbuild";
+// @ts-expect-error
+import envPlugin from "esbuild-plugin-env";
 import { readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { exit } from "node:process";
@@ -110,6 +112,7 @@ export const buildEntry = async (
       charset: "utf8",
       legalComments: "none",
       minify: false,
+      plugins: [envPlugin()],
       loader: {
         ".aac": "file",
         ".css": "file",
